@@ -1,0 +1,140 @@
+<script>
+        
+    function die(){
+                var di = document.getElementById("image");
+                di.style.transform = "skewY(20deg)";
+                di.style.opacity= "100%";
+                
+    }
+
+
+     function alrt(){
+                al = document.getElementById("d3");
+                al.style.visibility = "visible";
+
+     }
+    
+
+    function hid(){
+                var hidd = document.getElementById("d3");
+                hidd.style.visibility = "hidden";
+                var hiddd = document.getElementById("b1");
+                hiddd.style.visibility = "hidden";
+                var hiddd = document.getElementById("d1");
+                hiddd.style.visibility = "visible";
+                var hiddd = document.getElementById("image");
+                hiddd.style.visibility = "visible";
+                var hidddd = document.getElementById("ad1");
+                hidddd.style.visibility = "visible"
+                var hidddd = document.getElementById("b2");
+                hidddd.style.visibility = "visible"
+                var hidddd = document.getElementById("some_div");
+                hidddd.style.visibility = "visible"
+    }
+
+    function ls() {
+                rh = Math.floor(Math.random() * document.documentElement.clientHeight );
+                rw = Math.floor(Math.random() * document.documentElement.clientWidth );
+                const d = document.getElementById("image") ;
+                d.style.left = rw;
+                d.style.top =  rh ; 
+    }
+
+   
+    function mousePressed(){
+                 // setTimeout(ls,10000);
+                  setInterval(ls,2000)
+    }
+
+                 const myTimeout = setTimeout(myGreeting, 65000);
+    
+                 function myGreeting() {
+                 document.getElementById("demo").innerHTML = "GAME OVER!"
+    
+    }
+    </script>
+<body><div id="some_div" style="font-size: 25%; color:rgb(234, 247, 52);font-size: xx-large;visibility: hidden;"></div></body>
+<script>
+                var timeLeft = 65;
+                var elem = document.getElementById('some_div');
+    
+                var timerId = setInterval(countdown, 1000);
+    
+                function countdown() {
+                if (timeLeft == -1) {
+                clearTimeout(timerId);
+                doSomething();
+                } else {
+                elem.innerHTML = 'TIME' +' :'+ ' '+ timeLeft +  ' '+' SEC ';
+                timeLeft--;
+      }
+    }
+
+
+</script>
+<div id="container" ><div id="number"></div><img  id="image" onclick = "scoree()" style="height: 7%; width:7% ;position: absolute;top:10% ; visibility: hidden;"  src="dino.png"></div>
+<div id="d1" style="background-color: rgb(236, 226, 229) ;box-shadow: 10px 10px 10px grey; border: 2px groove rgb(57, 55, 58); height : 11%;
+                 width: 10%;  position: absolute; right:0% ;bottom: 3%; font-size: xx-large;text-align: left;visibility: hidden;text-shadow: 5px 7px 8px grey;" >
+                 <div id="numbers1" style="right:45%;top:45%;">score : <div id="numbers" style=" right:0%"></div> </div></div>
+<script>
+                  let add = document.getElementById("image");
+                  let int = document.getElementById("numbers");
+                  let integer = 0;
+                  add.addEventListener('click',function scoree(){
+                  integer +=1;
+                  int.innerHTML = integer;
+                  })
+</script>
+
+<style>
+    body {        
+                  background-image: url("wall.jpg");
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  overflow: hidden;
+                  cursor: url(aim11.jpg);
+                  
+    }
+
+</style>
+
+
+
+<body onclick="document.getElementById('ad1').play();">
+ 
+<button  id="b1" onclick=" alrt()" style="background-color: rgb(15, 22, 15) ; 
+                 border: 2px groove rgb(10, 7, 12);box-shadow: rgb(231, 226, 226) 10px 10px 10px; height : 9%; 
+                 width :13%; position: absolute; left:45% ;top: 0%;font-size: xx-large;font-style: italic;text-shadow:
+                 grey 2px 3px 4px;border-radius: 10% 10% 10% 10%;">START</button> 
+
+<button  id = "b2" style="background-color: rgb(15, 3, 20) ; border: 2px groove rgb(14, 13, 15); height : 9%; width :9%;
+                 position: absolute; left:45% ;bottom: 0%; font-size: xx-large;text-shadow:5px 7px 9px grey ; 
+                 box-shadow: 10px 10px 10px rgb(8, 8, 8);border-radius: 7% 7%;visibility: hidden;">STOP</button>
+
+<div id = "d2" style="visibility:hidden;position: absolute; left: 45%; right: 45%; "> </div>
+
+<div ><img  id="image" onclick = "scoree()" style="height: 7%; width:7% ;position: absolute;top:10% ; visibility: hidden;"  src="dino.png"></div>
+
+<div id="d1" style="background-color: rgb(37, 6, 16) ;box-shadow: 10px 10px 10px grey; border: 2px groove rgb(57, 55, 58); height : 9%;
+                 width: 13%;  position: absolute; right:0% ;bottom: 0%; font-size: xx-large;text-align: left;visibility: hidden;text-shadow: 5px 7px 8px grey;" >
+                 <div id="numbers" style="right:0%;top:45%;">score : </div></div>
+
+<div id="d3" style = " visibility: hidden; height: 60%; width: 30%;text-align: center;border: 3px groove rgb(27, 26, 26);box-shadow: 20px 20px 20px black ;border-radius: 10% 10% 10%;
+                 background-color: aquamarine;position: absolute;top: 25%;left: 38%;font-size: xx-large; background-image: url(ready.png) ;background-repeat: no-repeat;background-size: cover;"  >
+
+<button  onclick="hid()" style="position:absolute ;bottom:2%;left: 38%; height: 18%;width: 30%;background-color: rgb(129, 10, 10);border-color: rgb(243, 240, 240);border: 40%;border-radius: 9px 9px 9px 9px; font-size: xx-large;color: azure;"> YEAH</button> to play </div>
+
+
+
+<audio id="ad1" src="fire.mp3" preload="auto"  ></audio>
+
+<h2 id="demo" style = "position: absolute;left: 45%;top:45%;color: brown;font-size: xx-large;background-color: black; border: 5px white;"></h2>
+
+
+<script>
+    mousePressed()
+</script>
+
+
+<script>reload()</script>
+</body>
