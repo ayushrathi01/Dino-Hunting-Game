@@ -1,2 +1,1 @@
-# TASK-2
 DINO HUNTER
